@@ -1,0 +1,44 @@
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class Main {
+    private static String line;
+    public static void main(String[] args) {
+        try {
+            Path file = Paths.get("C:\\Users\\708\\Desktop\\testFile.txt");
+            BufferedReader reader = Files.newBufferedReader(file ,
+                    StandardCharsets.UTF_8);
+
+            while ((line = reader.readLine()) != null) {
+/*                for (int j = 1 ;j <5 ;j++){
+                    line = "new text"+ j;
+                    System.out.println(line);
+                }*/
+                System.out.println(line);
+            }
+
+            reader.close();
+        } catch (IOException e) {
+            System.err.println("IOException: " + e.getMessage());
+        }
+
+        try {
+            Path file = Paths.get("C:\\Users\\708\\Desktop\\testFile.txt");
+            FileWriter writer = new FileWriter(String.valueOf(file),true);
+            /*BufferedWriter writer = Files.newBufferedWriter(file,
+                    StandardCharsets.UTF_8);*/
+
+            //writer.write(line);
+            for (int i = 0; i < 10; i++) {
+                writer.write(System.lineSeparator()+"This is content line " + (i + 1));
+            }
+
+            writer.close();
+        } catch (IOException e) {
+            System.err.println("IOException: " + e.getMessage());
+        }
+    }
+}

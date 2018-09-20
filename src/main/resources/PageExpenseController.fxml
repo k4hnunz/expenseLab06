@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.scene.control.Button?>
+        <?import javafx.scene.control.Label?>
+        <?import javafx.scene.control.TextField?>
+        <?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PageExpenseController">
+<children>
+   <Button layoutX="464.0" layoutY="298.0" mnemonicParsing="false" onAction="#onClickToAddExpense" text="ตกลง" />
+   <TextField fx:id="date" layoutX="136.0" layoutY="298.0" prefHeight="25.0" prefWidth="127.0" />
+   <TextField fx:id="amount" layoutX="331.0" layoutY="298.0" prefHeight="25.0" prefWidth="114.0" />
+   <Label layoutX="101.0" layoutY="302.0" prefHeight="17.0" prefWidth="26.0" text="วันที่" />
+   <Label layoutX="273.0" layoutY="302.0" text="จำนวนเงิน" />
+   <Label fx:id="showAllExpense" alignment="TOP_LEFT" layoutX="100.0" layoutY="54.0" prefHeight="226.0" prefWidth="404.0" style="-fx-padding: 15;" />
+</children>
+</AnchorPane>
